@@ -1,0 +1,6 @@
+- name: configuring demo
+  hosts: local
+  connection: local
+  become: yes
+  roles:
+  - demo
