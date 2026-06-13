@@ -11,11 +11,11 @@
       enabled: yes
 
       
-  -  name: install botocore and boto3
-     ansible.builtin.pip:
-     name: "{{ item }}"
-     executable: pip3.9
-     loop:
+  - name: Install botocore and boto3
+    ansible.builtin.pip:
+      name: "{{ item }}"
+      executable: pip3
+    loop:
       - boto3
       - botocore
 
