@@ -6,5 +6,8 @@
 # 39366630303364326430653034623666366439393731303865656333636537653638326236633533
 # 6365313234336439366635313737363437336335336139363034
 
-MYSQL_ROOT_PASSWORD: 
+MYSQL_ROOT_PASSWORD: "{{ lookup('amazon.aws.aws_ssm',
+                                     '/dev/mysql/root_password',
+                                     region='us-east-1',
+                                     decrypt=True) }}"
 
