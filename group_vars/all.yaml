@@ -1,13 +1,12 @@
 ansible_user: ec2-user
 ansible_password: DevOps321
-MONGODB_HOST: mongodb-dev.daws-88sbatch.online
-CATALOGUE_HOST: catalogue-dev.daws-88sbatch.online
-REDIS_HOST: redis-dev.daws-88sbatch.online
-USER_HOST: user-dev.daws-88sbatch.online
-CART_HOST: cart-dev.daws-88sbatch.online
-MYSQL_HOST: mysql-dev.daws-88sbatch.online
-SHIPPING_HOST: shipping-dev.daws-88sbatch.online
-RABBITMQ_HOST: rabbitmq-dev.daws-88sbatch.online
-PAYMENT_HOST: payment-dev.daws-88sbatch.online
-
-
+MONGODB_HOST: mongodb-{{ env }}.daws-88sbatch.online
+REDIS_HOST: redis-{{ env }}.daws-88sbatch.online
+MYSQL_HOST: mysql-{{ env }}.daws-88sbatch.online
+RABBITMQ_HOST: rabbitmq-{{ env }}.daws-88sbatch.online
+CATALOGUE_HOST: catalogue.backend-alb-{{ env }}.daws-88sbatch.online
+USER_HOST: user.backend-alb-{{ env }}.daws-88sbatch.online
+CART_HOST: cart.backend-alb-{{ env }}.daws-88sbatch.online
+SHIPPING_HOST: shipping.backend-alb-{{ env }}.daws-88sbatch.online
+PAYMENT_HOST: payment.backend-alb-{{ env }}.daws-88sbatch.online
+app_version: v3
